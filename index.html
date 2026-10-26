@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flashborne - En construction</title>
+    <style>
+        /* Importation des polices modernes */
+        @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@700&family=Poppins:wght@300;400;600&display=swap');
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #0b0f19; /* Fond très sombre */
+            color: #ffffff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            text-align: center;
+            overflow: hidden;
+        }
+
+        .container {
+            padding: 2rem;
+            max-width: 600px;
+            position: relative;
+            z-index: 10;
+        }
+
+        /* Titre principal façon "électrique" */
+        h1 {
+            font-family: 'Orbitron', sans-serif;
+            font-size: 3.5rem;
+            letter-spacing: 2px;
+            margin-bottom: 0.5rem;
+            background: linear-gradient(90deg, #00f2fe 0%, #4facfe 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            animation: glow 2s ease-in-out infinite alternate;
+        }
+
+        h2 {
+            font-size: 1.5rem;
+            font-weight: 400;
+            margin-bottom: 1.5rem;
+            color: #a0aec0;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+        }
+
+        p {
+            font-size: 1.1rem;
+            line-height: 1.6;
+            margin-bottom: 2rem;
+            color: #cbd5e1;
+        }
+
+        /* Bouton de contact */
+        .contact-btn {
+            display: inline-block;
+            padding: 12px 30px;
+            font-size: 1rem;
+            font-weight: 600;
+            color: #0b0f19;
+            background: linear-gradient(90deg, #4facfe 0%, #00f2fe 100%);
+            text-decoration: none;
+            border-radius: 50px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .contact-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 20px rgba(0, 242, 254, 0.4);
+        }
+
+        /* Animation de lueur sur le titre */
+        @keyframes glow {
+            from { filter: drop-shadow(0 0 2px rgba(0, 242, 254, 0.2)); }
+            to { filter: drop-shadow(0 0 12px rgba(0, 242, 254, 0.6)); }
+        }
+
+        /* Halo de fond */
+        .bg-glow {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 50vw;
+            height: 50vw;
+            background: radial-gradient(circle, rgba(0, 242, 254, 0.08) 0%, rgba(11, 15, 25, 0) 60%);
+            z-index: 1;
+            pointer-events: none;
+        }
+        
+        /* Adaptation pour mobiles */
+        @media (max-width: 600px) {
+            h1 { font-size: 2.5rem; }
+            h2 { font-size: 1.2rem; }
+            .bg-glow { width: 100vw; height: 100vw; }
+        }
+    </style>
+</head>
+<body>
+    <div class="bg-glow"></div>
+    <div class="container">
+        <h1>FLASHBORNE</h1>
+        <h2>Site en construction</h2>
+        <p>Votre futur expert en installation d'Infrastructures de Recharge pour Véhicules Électriques (IRVE).</p>
+        <!-- Remplacez par votre véritable adresse e-mail si différente -->
+        <a href="mailto:contact@flashborne.fr" class="contact-btn">Me contacter</a>
+    </div>
+</body>
+</html>
