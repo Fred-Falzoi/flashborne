@@ -213,10 +213,18 @@
             <h2>Contactez-moi</h2>
             <p class="subtitle">Prêt à passer à l'électrique ? Décrivez votre projet pour obtenir une étude et un devis gratuit.</p>
             
-            <form action="https://formspree.io/f/mbggkqpl" method="POST">
+            <!-- Formulaire géré via FormSubmit -->
+            <form action="https://formsubmit.co/contact@flashborne.fr" method="POST">
+               
+                <!-- Configuration silencieuse de FormSubmit -->
+                <input type="hidden" name="_subject" value="Nouveau devis depuis le site Flashborne !">
+                <input type="hidden" name="_captcha" value="false">
+               
+                <!-- Champs visibles par l'utilisateur -->
                 <input type="text" name="nom" placeholder="Nom complet ou raison sociale" required>
                 <input type="email" name="email" placeholder="Votre adresse e-mail" required>
                 <textarea name="message" rows="5" placeholder="Détails de votre besoin (Type de véhicule, puissance souhaitée, installation monophasée ou triphasée...)" required></textarea>
+               
                 <button type="submit" class="btn">Envoyer la demande</button>
             </form>
         </div>
