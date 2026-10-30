@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://flashborne.fr/sitemap.xml
