@@ -52,7 +52,7 @@
             text-decoration: none; 
         }
         .nav-logo-img {
-            height: 45px;
+            height: 40px;
             width: auto;
             object-fit: contain;
         }
@@ -75,14 +75,6 @@
         .container { max-width: 1000px; z-index: 10; width: 100%; }
 
         /* Accueil */
-        .hero-logo {
-            max-width: 220px;
-            width: 100%;
-            height: auto;
-            margin-bottom: 1.5rem;
-            filter: drop-shadow(0 0 15px rgba(0, 242, 254, 0.4));
-        }
-
         h1 {
             font-family: 'Orbitron', sans-serif;
             font-size: 3.5rem;
@@ -174,7 +166,6 @@
         /* Comportement sur écrans mobiles */
         @media (max-width: 768px) {
             h1 { font-size: 1.8rem; letter-spacing: 1px; }
-            .hero-logo { max-width: 150px; }
             .subtitle { font-size: 1rem; padding: 0 10px; }
             section { padding-top: 5rem; }
 
@@ -223,7 +214,6 @@
     <section id="accueil">
         <div class="bg-glow"></div>
         <div class="container">
-            <img src="logo.png" alt="Logo Flashborne" class="hero-logo">
             <h1>FLASHBORNE</h1>
             <p class="subtitle">Votre expert en installation d'Infrastructures de Recharge pour Véhicules Électriques, Domotique et Réseau.</p>
             <a href="#contact" class="btn">Demander un devis</a>
