@@ -34,7 +34,7 @@
             position: fixed;
             top: 0; width: 100%;
             background: rgba(11, 15, 25, 0.95);
-            padding: 0.8rem 2rem;
+            padding: 1rem 2rem;
             display: flex;
             justify-content: space-between;
             align-items: center;
@@ -42,20 +42,7 @@
             border-bottom: 1px solid rgba(0, 242, 254, 0.2);
             backdrop-filter: blur(5px);
         }
-        nav .logo { 
-            display: flex;
-            align-items: center;
-            gap: 12px;
-            font-family: 'Orbitron', sans-serif; 
-            font-size: 1.5rem; 
-            color: #00f2fe; 
-            text-decoration: none; 
-        }
-        .nav-logo-img {
-            height: 40px;
-            width: auto;
-            object-fit: contain;
-        }
+        nav .logo { font-family: 'Orbitron', sans-serif; font-size: 1.5rem; color: #00f2fe; text-decoration: none; }
         nav ul { list-style: none; display: flex; gap: 2rem; }
         nav ul li a { color: #cbd5e1; text-decoration: none; font-weight: 600; transition: color 0.3s; }
         nav ul li a:hover { color: #00f2fe; }
@@ -126,7 +113,7 @@
         .product-image {
             width: 100%;
             height: 180px;
-            object-fit: cover;
+            object-fit: cover; /* Remplit le cadre sans déformer l'image */
             border-radius: 10px;
             margin-bottom: 1.5rem;
             border: 1px solid rgba(0, 242, 254, 0.3);
@@ -149,7 +136,7 @@
         }
         .btn:hover { transform: translateY(-3px); box-shadow: 0 10px 20px rgba(0, 242, 254, 0.3); }
 
-        /* Style du bouton hamburger */
+        /* Style du bouton hamburger (caché par défaut sur ordinateur) */
         .hamburger {
             display: none;
             flex-direction: column;
@@ -169,8 +156,10 @@
             .subtitle { font-size: 1rem; padding: 0 10px; }
             section { padding-top: 5rem; }
 
+            /* Affichage du bouton */
             .hamburger { display: flex; }
 
+            /* Menu initialement caché hors de l'écran vers le haut */
             nav ul {
                 position: absolute;
                 top: -400px; 
@@ -185,8 +174,9 @@
                 z-index: 99;
             }
 
+            /* Classe déclenchée par JavaScript pour faire descendre le menu */
             nav ul.nav-active {
-                top: 70px;
+                top: 70px; /* Aligné sous la barre de navigation */
             }
         }
     </style>
@@ -194,10 +184,8 @@
 <body>
 
     <nav>
-        <a href="#accueil" class="logo">
-            <img src="logo.png" alt="Flashborne Logo" class="nav-logo-img">
-            FLASHBORNE
-        </a>
+        <a href="#accueil" class="logo">FLASHBORNE</a>
+        <!-- Bouton hamburger pour la version mobile -->
         <div class="hamburger" id="hamburger-btn">
             <span></span>
             <span></span>
@@ -215,7 +203,7 @@
         <div class="bg-glow"></div>
         <div class="container">
             <h1>FLASHBORNE</h1>
-            <p class="subtitle">Votre expert en installation d'Infrastructures de Recharge pour Véhicules Électriques, Domotique et Réseau.</p>
+            <p class="subtitle">Votre expert en installation d'Infrastructures de Recharge pour Véhicules Électriques.</p>
             <a href="#contact" class="btn">Demander un devis</a>
         </div>
     </section>
@@ -223,7 +211,7 @@
     <section id="services">
         <div class="container">
             <h2>Mes Services</h2>
-            <p class="subtitle">Des interventions sur-mesure, conformes aux normes de sécurité pour la mobilité et l'habitat de demain.</p>
+            <p class="subtitle">Des interventions sur-mesure, conformes aux normes de sécurité pour la mobilité de demain.</p>
             
             <div class="grid-layout">
                 <div class="card">
@@ -231,12 +219,12 @@
                     <p>Pose de bornes de recharge pour particuliers et professionnels, avec une mise en service sécurisée et certifiée.</p>
                 </div>
                 <div class="card">
-                    <h3>Domotique & Réseau</h3>
-                    <p>Optimisation intelligente de votre habitat, gestion de l'énergie et câblage réseau haute performance.</p>
+                    <h3>Conseil & Audit</h3>
+                    <p>Analyse de votre réseau électrique, vérification de la terre et conseil sur le dimensionnement adapté à vos besoins.</p>
                 </div>
                 <div class="card">
-                    <h3>Conseil, Audit & Maintenance</h3>
-                    <p>Analyse de votre réseau électrique, vérification de la terre, dépannage et entretien de vos installations.</p>
+                    <h3>Maintenance</h3>
+                    <p>Suivi, dépannage et entretien de vos infrastructures pour garantir une disponibilité maximale de vos points de charge.</p>
                 </div>
             </div>
         </div>
@@ -249,21 +237,25 @@
             
             <div class="grid-layout">
                 <div class="card">
+                    <!-- Intégration de l'image de la prise renforcée -->
                     <img src="prise_renfo.jpg" alt="Prise Renforcée 3.7 kW" class="product-image">
                     <h3>Prise Renforcée <br>(3.7 kW)</h3>
                     <p>Solution économique et sécurisée pour un usage quotidien modéré. Idéale pour les véhicules hybrides rechargeables.</p>
                 </div>
                 <div class="card">
+                    <!-- Intégration de l'image de la borne 7.4 kW -->
                     <img src="borne_7k.jpg" alt="Borne Monophasée 7.4 kW" class="product-image">
                     <h3>Borne Monophasée <br>(7.4 kW)</h3>
                     <p>Le standard pour la maison. Permet une recharge complète pendant la nuit pour la majorité des véhicules électriques.</p>
                 </div>
                 <div class="card">
+                    <!-- Intégration de l'image de la borne 11 kW -->
                     <img src="borne_11k.jpg" alt="Borne Triphasée 11 kW" class="product-image">
                     <h3>Borne Triphasée <br>(11 kW)</h3>
                     <p>Compromis idéal en courant triphasé. Permet une recharge rapide et confortable pour les véhicules compatibles au quotidien.</p>
                 </div>
                 <div class="card">
+                    <!-- Intégration de l'image de la borne 22 kW -->
                     <img src="borne_22k.jpg" alt="Borne Triphasée 22 kW" class="product-image">
                     <h3>Borne Triphasée <br>(22 kW)</h3>
                     <p>Solution haute performance pour les professionnels ou les domiciles équipés en courant triphasé. Recharge accélérée.</p>
@@ -277,11 +269,17 @@
             <h2>Contactez-moi</h2>
             <p class="subtitle">Prêt à passer à l'électrique ? Décrivez votre projet pour obtenir une étude et un devis gratuit.</p>
             
+            <!-- Formulaire géré via Web3Forms -->
             <form action="https://api.web3forms.com/submit" method="POST">
+                
+                <!-- Configuration de sécurité Web3Forms -->
+                <!-- Remplacez la valeur ci-dessous par la clé reçue par e-mail -->
                 <input type="hidden" name="access_key" value="ab8e42c3-e9c4-4443-aac5-46dd570b608c">
                 <input type="hidden" name="subject" value="Nouveau devis depuis le site Flashborne">
+                <!-- Protection anti-spam invisible -->
                 <input type="checkbox" name="botcheck" style="display: none;">
                 
+                <!-- Champs visibles par l'utilisateur -->
                 <input type="text" name="nom" placeholder="Nom complet ou raison sociale" required>
                 <input type="email" name="email" placeholder="Votre adresse e-mail" required>
                 <textarea name="message" rows="5" placeholder="Détails de votre besoin (Type de véhicule, puissance souhaitée, installation monophasée ou triphasée...)" required></textarea>
@@ -290,12 +288,10 @@
             </form>
         </div>
     </section>
-
-    <div id="cookie-banner" class="cookie-banner">
-        <p>Ce site utilise des cookies essentiels pour assurer son bon fonctionnement et améliorer votre expérience.</p>
-        <button id="accept-cookies" class="btn-cookie">Accepter</button>
-    </div>
-
+        <div id="cookie-banner" class="cookie-banner">
+            <p>Ce site utilise des cookies essentiels pour assurer son bon fonctionnement et améliorer votre expérience.</p>
+            <button id="accept-cookies" class="btn-cookie">Accepter</button>
+        </div>
     <script>
         document.addEventListener("DOMContentLoaded", () => {
             
@@ -311,21 +307,26 @@
                 localStorage.setItem("cookiesAccepted", "true");
                 banner.classList.remove("show");
             });
+            // Fin de la gestion des cookies
+
 
             // --- 2. GESTION DU MENU MOBILE ---
             const hamburgerBtn = document.getElementById("hamburger-btn");
             const navLinks = document.getElementById("nav-links");
             const links = navLinks.querySelectorAll("a");
 
+            // Ouvre ou ferme le menu au clic sur le bouton
             hamburgerBtn.addEventListener("click", () => {
                 navLinks.classList.toggle("nav-active");
             });
 
+            // Ferme le menu automatiquement lorsqu'un lien est cliqué
             links.forEach(link => {
                 link.addEventListener("click", () => {
                     navLinks.classList.remove("nav-active");
                 });
             });
+            // Fin de la gestion du menu
             
         });
     </script>
